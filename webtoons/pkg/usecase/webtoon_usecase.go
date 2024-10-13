@@ -4,16 +4,16 @@ import (
 	"errors"
 
 	"github.com/webtoons/pkg/domain"
-	"github.com/webtoons/pkg/repository"
+	repointerfaces "github.com/webtoons/pkg/repository/interface"
 )
 
 // WebtoonUseCaseImpl implements WebtoonUseCase interface.
 type WebtoonUseCase struct {
-	WebtoonRepo repository.WebtoonRepository
+	WebtoonRepo repointerfaces.WebtoonRepository
 }
 
 // NewWebtoonUseCase creates a new WebtoonUseCase.
-func NewWebtoonUseCase(repo repository.WebtoonRepository) *WebtoonUseCase {
+func NewWebtoonUseCase(repo repointerfaces.WebtoonRepository) *WebtoonUseCase {
 	return &WebtoonUseCase{WebtoonRepo: repo}
 }
 
